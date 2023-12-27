@@ -1,38 +1,40 @@
 import React from 'react'
 import CartSummary from './CartSummary'
+import { Container } from 'react-dom'
 
 export default function Navi() {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                        <div class="container-fluid">
-                            <a class="navbar-brand" href="#">Navbar</a>
-                        </div>
-                    </nav>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#">Navbar scroll</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarScroll">
+                        <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                            <li className="nav-item">
+                                <a className="nav-link active" aria-current="page" href="#">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Link</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown link
+                            <li className="nav-item dropdown">
+                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Link
                                 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <ul className="dropdown-menu">
+                                    <CartSummary></CartSummary>
                                 </ul>
                             </li>
+                            <li className="nav-item">
+                                <a className="nav-link disabled" aria-disabled="true">Link</a>
+                            </li>
                         </ul>
+                        <form className="d-flex" role="search">
+                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                                <button className="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
             </nav>
