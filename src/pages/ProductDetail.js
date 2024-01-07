@@ -17,23 +17,23 @@ export default function ProductDetail() {
         
         <div>
             
-            <div class="card">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                    <h5 class="card-title">{products.modelName}</h5>
-                    <p class="card-text">Aracın özellikleri </p>
+            <div className="card">
+                <img src="..." className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{products.modelName}</h5>
+                    <p className="card-text">Aracın özellikleri </p>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An i</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
+                <ul className="list-group list-group-flush">
+                    <li className="list-group-item">An i</li>
+                    <li className="list-group-item">A second item</li>
+                    <li className="list-group-item">A third item</li>
                 </ul>
-                <div class="card-body">
-                    <Link to="#" class="card-link">
-                        <button type="button" class="btn btn-outline-success">Sepete Ekle</button>
+                <div className="card-body">
+                    <Link to="#" className="card-link">
+                        <button type="button" className="btn btn-outline-success">Sepete Ekle</button>
                     </Link>
-                    <Link to="#" class="card-link">
-                        <button type="button" class="btn btn-outline-success">Favorilere Ekle</button>
+                    <Link to="#" className="card-link">
+                        <button type="button" className="btn btn-outline-success">Favorilere Ekle</button>
                     </Link>
                 </div>
             </div>

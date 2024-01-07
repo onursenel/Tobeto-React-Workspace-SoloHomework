@@ -47,10 +47,10 @@ export default function ProductList() {
               <td>{product.dailyPrice}</td>
               
               <td><Link to={`/products/${product.id}`}>
-              <button type="button" class="btn btn-info">Hemen Kirala</button>
+              <button type="button" className="btn btn-info">Hemen Kirala</button>
               </Link></td>
 
-              <button onClick={()=>handleAddToCart(product)} type="button" class="btn btn-info">Sepete Ekle</button>
+              <button onClick={()=>handleAddToCart(product)} type="button" className="btn btn-info">Sepete Ekle</button>
             </tr>
           ))
         }
