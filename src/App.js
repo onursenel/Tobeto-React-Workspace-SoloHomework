@@ -2,6 +2,7 @@ import './App.css';
 import Dashboard from './layouts/Dashboard';
 import "bootstrap/dist/css/bootstrap.css"
 import Navi from './layouts/Navi';
+import SignIn from './layouts/SignIn';
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <div className='main'>
         <Dashboard />
       </div>
-
+      
     </div>
   );
 }

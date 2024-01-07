@@ -5,13 +5,11 @@ export default function Categories() {
 
         <div>
             <ul className="list-group">
-                <li className="list-group-item">
-                    A disabled item
-                </li>
-                <li className="list-group-item">A second item</li>
-                <li className="list-group-item">A third item</li>
-                <li className="list-group-item">A fourth item</li>
-                <li className="list-group-item">And a fifth one</li>
+                <li className="list-group-item">SUV</li>
+                <li className="list-group-item">Sedan</li>
+                <li className="list-group-item">Hatch-Back</li>
+                <li className="list-group-item">Minibüs</li>
+                <li className="list-group-item">Otobüs</li>
             </ul>
         </div>
     )
