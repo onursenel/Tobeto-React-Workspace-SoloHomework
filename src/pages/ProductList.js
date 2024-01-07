@@ -2,15 +2,23 @@ import React, { useEffect, useState } from "react";
 
 import ProductService from "../services/productService";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/actions/cartActions";
+import { toast } from "react-toastify";
 
 export default function ProductList() {
-
+  const dispatch = useDispatch()
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     let productService = new ProductService()
     productService.getProducts().then(result => setProducts(result.data))
   })
+
+  const handleAddToCart = (product) =>{
+    dispatch(addToCart(product))
+    toast.success(`${product.modelName} sepete eklendi`)
+  }
 
 
 
@@ -24,6 +32,8 @@ export default function ProductList() {
             <th scope="col">Yıl</th>
             <th scope="col">Renk</th>
             <th scope="col">Fiyat</th>
+            <th scope="col"></th>
+            <th scope="col"></th>
           </tr>
         </thead>
 
@@ -37,8 +47,10 @@ export default function ProductList() {
               <td>{product.dailyPrice}</td>
               
               <td><Link to={`/products/${product.id}`}>
-              <button type="button" class="btn btn-info">Kirala</button>
+              <button type="button" class="btn btn-info">Hemen Kirala</button>
               </Link></td>
+
+              <button onClick={()=>handleAddToCart(product)} type="button" class="btn btn-info">Sepete Ekle</button>
             </tr>
           ))
         }
